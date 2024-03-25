@@ -30,6 +30,19 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: red;
+  display: none;
+}
+
+
+body::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: green;
+  display: none;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

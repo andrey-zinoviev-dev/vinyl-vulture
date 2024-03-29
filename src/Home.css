@@ -3,10 +3,30 @@
     width: 100%;
     background-color: #2e2d2d;
     box-sizing: border-box;
+    padding: 0% 15%;
 }
 
-/* .main::-webkit-scrollbar,.main::-webkit-scrollbar-track,.main::-webkit-scrollbar-thumb{
-    width: 0px;
-    display: none;
+.search{
 
-} */
+
+}
+
+.search__form{
+
+}
+
+.search__input{
+
+}
+
+.intro__cont{
+
+}
+
+.pop__cont{
+
+}
+
+.main__cont{
+
+}

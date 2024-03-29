@@ -5,9 +5,15 @@
     left: 0;
     top: 0;
     background-color: rgb(21, 21, 21);
-    justify-content: space-around;
+    justify-content: space-between;
     /* padding: 5px; */
     align-items: center;
+    /* font-family: "Lora", serif; */
+    /* font-family: "Wix Madefor Display", sans-serif; */
+    font-family: "Manrope", sans-serif;
+    padding: 0% 15%;
+    box-sizing: border-box;
+
 }
 
 .btn__div{
@@ -17,6 +23,9 @@
 
 .h__btn{
   border-radius: 20px;
-
+  transition:all 0.25s ease-in-out;
 }
 
+.h__btn:hover{
+  border: 2px solid;
+}

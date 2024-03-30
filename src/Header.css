@@ -11,9 +11,20 @@
     /* font-family: "Lora", serif; */
     /* font-family: "Wix Madefor Display", sans-serif; */
     font-family: "Manrope", sans-serif;
-    padding: 0% 15%;
+    padding: 1% 15%;
     box-sizing: border-box;
+}
 
+.header__p {
+  font-size: 24px;
+  line-height: 1;
+  color: white;
+  margin: 0;
+  font-family: "Jura", sans-serif;
+}
+
+.header__p span {
+  color: #FE9E01;
 }
 
 .btn__div{
@@ -24,8 +35,10 @@
 .h__btn{
   border-radius: 20px;
   transition:all 0.25s ease-in-out;
+  padding: 5px 15px;
+  font-size: 14px;
 }
 
 .h__btn:hover{
-  border: 2px solid;
+  /* border: 2px solid; */
 }

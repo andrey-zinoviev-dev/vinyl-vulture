@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -45,6 +46,10 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
+section {
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -67,6 +72,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 @media (prefers-color-scheme: light) {

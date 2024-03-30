@@ -5,8 +5,8 @@ export default function Header({}) {
   
     return (
       <header className="header">
-        <p>
-          VV
+        <p className='header__p'>
+          <span>V</span>inyl <span>V</span>ulture
         </p>
         <div className='btn__div'>
           <button className="h__btn">

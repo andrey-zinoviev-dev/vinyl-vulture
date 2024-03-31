@@ -3,6 +3,13 @@ export interface AlbumInterface {
     price: number,
     cover: string,
     published: Date,
+    songs:         {
+        name: string,
+        length: string,
+        link: string,
+    }[
+
+    ],
     author: {
         name: string,
         cover: string,

@@ -3,15 +3,41 @@ import './Home.css'
 import { popularAlbums } from './utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-export default function Home({}) {
+export default function Home() {
     const [popularOrder, setPopularOrder] = React.useState(0);
 
     //refs
-    const popularRef = React.useRef(null);
+    const popularRef = React.useRef<HTMLUListElement>(null);
     //functions
     function popularNavButtonClick() {
         console.log(popularRef.current);
     }
+    // console.log(popularAlbums.length);
+    React.useEffect(() => {
+
+        console.log(popularOrder);
+
+        const timeout = setTimeout(() =>{
+            if(popularRef.current) {
+                if(popularOrder === popularAlbums.length -1) {
+                    popularRef.current.scrollLeft = 0;
+                } else {
+                    popularRef.current.scrollLeft += Math.ceil(popularRef.current.children[popularOrder].clientWidth);
+
+                }
+                // console.log(popularRef.current.children[popularOrder].clientWidth);
+            } 
+            setPopularOrder((prevValue) => {
+                return prevValue === popularAlbums.length -1 ? 0 : prevValue +1;
+            })
+        }, 3000)
+
+        return () => {
+            clearTimeout(timeout);
+        }
+    }, [popularOrder]);
+
+    // console.log(popularOrder);
 
     return (
      <main className="main">
@@ -32,25 +58,27 @@ export default function Home({}) {
         </section>
         <section className='intro__cont'>
             <div className='intro__cont-popular'>
-                <button onClick={popularNavButtonClick} className='intro__cont-popular-btn' style={{left: -75}}>
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                </button>
+
                 <ul ref={popularRef} className='intro__cont-popular-albs'>
-                    {popularAlbums.map((album) => {
-                        return <li key={album.name} style={{backgroundImage: `url(${album.cover})`}}>
-                            <p>{album.name}</p>
-                            <span>{album.price}</span>
-                            <span>{album.published.getDate()}</span>
+                    {popularAlbums.map((album, index) => {
+                        return <li key={index} style={{backgroundImage: `url(${album.cover})`}}>
+
                         </li>
                     })}
                 </ul>
-                <div>
-                    <div></div>
-                    <p>{1}/{popularAlbums.length}</p>
+                <div className='intro__cont-popular-navigation'>
+                    <button onClick={popularNavButtonClick} className='intro__cont-popular-btn'>
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+                    <button onClick={popularNavButtonClick} className='intro__cont-popular-btn'>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                    </button>
+                    <div className='progerss-bar-wrapper'>
+                        <div className='progress-bar' style={{width: `${popularOrder/popularAlbums.length * 100}%`}}></div>
+                    </div>
+                    <p style={{color: "white"}}>{1}/{popularAlbums.length}</p>
                 </div>
-                <button onClick={popularNavButtonClick} className='intro__cont-popular-btn' style={{right: -75}}>
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </button>
+
             </div>
 
         </section>

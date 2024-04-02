@@ -59,12 +59,12 @@ export default function Home() {
         </section> */}
         <section className='search'>
             {/* <h2></h2> */}
-            <form className='search__form'>
+            {/* <form className='search__form'>
                 <input placeholder='Найти любую пластинку' className='search__input'></input>
                 <button className='h__btn'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
-            </form> 
+            </form>  */}
             {/* <div>
 
                 <h2>
@@ -159,11 +159,28 @@ export default function Home() {
             </div>
 
         </section>
-        <section className='pop__cont'>
-            Популярные 
+        <section className='genre__cont'>
+            <div className='genre__bigd'>
+                большой д
+            </div>
+             <div className='genre__littled'>
+                маленький д
+                <div className='genre__insaded'>
+                    внутренний д
+                </div>
+                <div className='genre__insaded'>
+                    внутренний д
+                </div>
+                <div className='genre__insaded'>
+                    внутренний д
+                </div>
+                <div className='genre__insaded'>
+                    внутренний д
+                </div>
+             </div>
         </section>
         <section className='main__cont'>
-            Плитки с заголовком
+            хз чо пока что
         </section>
      </main>
     )

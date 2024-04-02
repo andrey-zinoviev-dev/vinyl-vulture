@@ -4,6 +4,7 @@ import { popularAlbums } from './utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faMagnifyingGlass, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faVk } from '@fortawesome/free-brands-svg-icons'
+import Arrivals from './Arrivals'
 export default function Home() {
     const [popularOrder, setPopularOrder] = React.useState(0);
 
@@ -53,9 +54,9 @@ export default function Home() {
                 <FontAwesomeIcon icon={faInstagram} />
             </li>
         </ul>
-        <section className='main__promo'>
+        {/* <section className='main__promo'>
             <h1>VINYL VULTURE // VINYL VULTURE // VINYL VULTURE // VINYL VULTURE //</h1>
-        </section>
+        </section> */}
         <section className='search'>
             {/* <h2></h2> */}
             <form className='search__form'>
@@ -87,6 +88,7 @@ export default function Home() {
                 </form>
             </div> */}
         </section>
+        <Arrivals />
         <section className='intro__cont'>
             <h2><p>Vinyl</p> <p>Vulture</p> рекомендует</h2>
             <div className='intro__cont-popular'>

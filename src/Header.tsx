@@ -1,5 +1,7 @@
 import React from 'react'
 import './Header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 export default function Header({}) {
     
   
@@ -8,12 +10,18 @@ export default function Header({}) {
         <p className='header__p'>
           <span>V</span>inyl <span>V</span>ulture
         </p>
+        <form className='search__form'>
+                <input placeholder='Найти любую пластинку' className='search__input'></input>
+                <button className='h__btn'>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </button>
+            </form> 
         <div className='btn__div'>
           <button className="h__btn">
-            Log in
+            Вход
           </button>
           <button className="h__btn">
-            Sign up
+            Регистрация
           </button>
         </div>
       </header>

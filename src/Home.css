@@ -2,9 +2,9 @@
     position: relative;
     min-height: 100vh;
     width: 100%;
-    background-color: #262525;
+    /* background-color: #262525; */
     box-sizing: border-box;
-    padding: 25px 5%;
+    /* padding: 25px 5%; */
     max-width: 1440px;
     margin: 0 auto;
     /* min-height: 100vh; */

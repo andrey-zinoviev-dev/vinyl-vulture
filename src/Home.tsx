@@ -12,12 +12,12 @@ export default function Home() {
     const popularRef = React.useRef<HTMLUListElement>(null);
     //functions
     function popularNavButtonClick() {
-        console.log(popularRef.current);
+        // console.log(popularRef.current);
     }
     // console.log(popularAlbums.length);
     React.useEffect(() => {
 
-        console.log(popularOrder);
+        // console.log(popularOrder);
 
         // const timeout = setTimeout(() =>{
         //     if(popularRef.current) {

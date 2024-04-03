@@ -23,13 +23,24 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   /* display: block; */
-  display: flex;
+
+  /* display: flex;
   overflow: hidden;
   align-items: flex-start;
   justify-content: space-between;
   overflow: auto;
-  gap: 20px;
+  gap: 20px; */
+
   /* gap: 50px; */
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(256px, 1fr));
+  grid-auto-columns: minmax(256px, 1fr);
+  grid-auto-flow: column;
+  gap: 1px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  /* scroll-snap-align: ; */
 }
 
 .arrivals__ul::-webkit-scrollbar {
@@ -38,10 +49,19 @@
 
 .arrivals__ul li {
   /* width: 256px; */
-  width: 240px;
-  flex: 1 0 auto;
+  /* width: 240px; */
+  flex: 1 0 100%;
   position: relative;
-  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 30px;
+  background-color: #1A1A1A;
+  scroll-snap-align: x proximity;
   /* min-width: 280px; */
   /* min-width: 300px; */
   /* min-width: 300px;
@@ -50,23 +70,31 @@
   /* min-width: calc(256px - 16px); */
 }
 
+.arrivals__ul-li-signs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .arrivals__ul-li-fire {
-  position: absolute;
-  top: 10px;
+  /* position: absolute; */
+  /* top: 10px; */
   margin: 0;
-  left: 10px;
+  /* left: 10px; */
   box-sizing: border-box;
   padding: 1px 10px;
   border: 1px solid white;
   color: white;
   font-weight: 300;
+  /* align-self: ; */
 }
 
 .arrivals__ul-li-fav {
-  position: absolute;
+  /* position: absolute;
     top: 5px;
-    right: 5px;
-    background-color: rgba(0, 0, 0, 0.25);
+    right: 5px; */
+    background-color: transparent;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     width: 35px;
@@ -75,6 +103,7 @@
     justify-content: center;
     font-size: 18px;
     padding: 0;
+    margin: 0 0 0 auto;
 }
 
 .arrivals__ul li img {
@@ -92,6 +121,8 @@
 
 .arrivals__ul-li-text p {
   margin: 0;
+  width: 100%;
+  text-align: left;
 }
 
 .arrivals__ul-li-author {
@@ -109,5 +140,34 @@
 }
 
 .arrivals__ul-li-action-div button {
+  background-color: #646cff;
+  padding: 7px 15px;
+}
+
+.arrivals__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.arrivals__dots {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 15px;
+}
+
+.arrivals__dots li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrivals__dots li button {
   background-color: #1A1A1A;
+  border-radius: 0;
+  padding: 0;
+  width: 30px;
+  height: 5px;
 }

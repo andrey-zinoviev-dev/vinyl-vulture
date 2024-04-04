@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faMagnifyingGlass, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faVk } from '@fortawesome/free-brands-svg-icons'
 import Arrivals from './Arrivals'
+import RAP from './assets/2281b612721133.5626c3e5bc694.png'
+import INDIE from './assets/Unpeeled.jpg'
+import SHOEGAZE from './assets/c82dfe541389f8f05554a444091b34be.500x500x1.jpg'
+import Soundtrack from './assets/81gC318-4KL._UF894,1000_QL80_.jpg'
 export default function Home() {
     const [popularOrder, setPopularOrder] = React.useState(0);
 
@@ -160,23 +164,39 @@ export default function Home() {
 
         </section>
         <section className='genre__cont'>
-            <div className='genre__bigd'>
-                большой д
-            </div>
+            <button className='genre__bigd'>
+                <p className='genre__insaded-txt2'> Metal </p>
+                <div className='genre__insaded-overlay'>
+
+                 </div>
+            </button>
              <div className='genre__littled'>
-                маленький д
-                <div className='genre__insaded'>
-                    внутренний д
-                </div>
-                <div className='genre__insaded'>
-                    внутренний д
-                </div>
-                <div className='genre__insaded'>
-                    внутренний д
-                </div>
-                <div className='genre__insaded'>
-                    внутренний д
-                </div>
+                {/* маленький д */}
+                
+                <button className='genre__insaded' style={{backgroundImage:`url(${RAP})`}}>
+                    <p className='genre__insaded-txt1'>RAP</p>
+                    <div className='genre__insaded-overlay'>
+
+                    </div>
+                </button>
+                <button className='genre__insaded' style={{backgroundImage:`url(${INDIE})`}}>
+                    <p className='genre__insaded-txt1'>Indie</p>
+                    <div className='genre__insaded-overlay'>
+
+                    </div>
+                </button>
+                <button className='genre__insaded'style={{backgroundImage:`url(${SHOEGAZE})`}}>
+                    <p className='genre__insaded-txt1'>ShoeGaze</p>
+                    <div className='genre__insaded-overlay'>
+
+                    </div>
+                </button>
+                <button className='genre__insaded'style={{backgroundImage:`url(${Soundtrack})`}}>
+                    <p className='genre__insaded-txt1'>Soundtrack</p>
+                    <div className='genre__insaded-overlay'>
+
+                    </div>
+                </button>
              </div>
         </section>
         <section className='main__cont'>

@@ -74,13 +74,15 @@ button {
   transition: border-color 0.25s;
   background-color: #2e2d2d;
   color: white;
+  font-family: "Manrope", sans-serif;
+  
 }
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline:none;
 }
 
 ul {

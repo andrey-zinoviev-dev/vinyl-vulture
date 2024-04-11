@@ -27,6 +27,11 @@ export default function Arrivals() {
       if(activeIndex.index === 0) {
         listRef.current.scrollLeft = listRef.current.scrollLeft - (Math.ceil(listRef.current.clientWidth*(activeIndex.index + 1)))
       } else {
+        if(activeIndex.index > dotsArray.length - 1) {
+          setActiveIndex((prevValue) => {
+            return {...prevValue, index: 0, back: true};
+          })
+        }
         listRef.current.scrollLeft = activeIndex.back ? listRef.current.scrollLeft - (Math.ceil(listRef.current.clientWidth*(activeIndex.index))) : listRef.current.scrollLeft + (Math.ceil(listRef.current.clientWidth*activeIndex.index));
       }
     }

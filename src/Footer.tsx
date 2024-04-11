@@ -6,7 +6,21 @@ export default function Footer({}) {
   
     return (
      <footer className="footer">
-        "Низок"
+        <ul>
+         <li>
+          <a>Публичная оферта</a>
+         </li>
+         <li>
+          <a>Политика обработки данных</a>
+         </li>
+         <li>
+           <a>Сотрудничество</a> 
+         </li>
+         <li>
+          <a>Соц Сети</a> 
+         </li>
+          <a>Vynyl Vulture ©</a> 
+        </ul>
      </footer>
     )
   }

@@ -362,7 +362,7 @@
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    padding: 30px;
+    /* padding: 0; */
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -438,12 +438,12 @@
     box-sizing: border-box;
     padding: 15px 15px;
     border-radius: 20px;
-    backdrop-filter: blur(9px);
     line-height: 1;
     border: 2px solid white;
     font-family: "Jura", sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 4px 0px;
+    backdrop-filter: blur(9px);
 }
 
 
@@ -458,12 +458,12 @@
     box-sizing: border-box;
     padding: 15px 15px;
     border-radius: 20px;
-    backdrop-filter: blur(9px);
     line-height: 1;
     border: 2px solid white;
     font-family: "Jura", sans-serif;
     letter-spacing: 3px;
     margin: 4px 0px;
+    backdrop-filter: blur(9px);
 }
 
 
@@ -478,12 +478,12 @@
     box-sizing: border-box;
     padding: 15px 15px;
     border-radius: 20px;
-    backdrop-filter: blur(9px);
     line-height: 1;
     border: 2px solid white;
     font-family: "Jura", sans-serif;
     letter-spacing: 3px;
     margin: 4px 0px;
+    backdrop-filter: blur(9px);
 }
 
 
@@ -498,12 +498,12 @@
     box-sizing: border-box;
     padding: 15px 15px;
     border-radius: 20px;
-    backdrop-filter: blur(9px);
     line-height: 1;
     border: 2px solid white;
     font-family: "Jura", sans-serif;
     letter-spacing: 3px;
     margin: 4px 0px;
+    backdrop-filter: blur(9px);
 }
 
 
@@ -526,4 +526,13 @@
 
 .main__cont{
     background-color:#1A1A1A;
+}
+
+@media screen and (max-width: 1439px) {
+    .main {
+        max-width: 1024px;
+    }
+    .search__form{
+        max-width: 540px;
+    }
 }

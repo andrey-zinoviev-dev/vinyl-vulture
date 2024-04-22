@@ -19,7 +19,7 @@ export default function Footer({}) {
          <li>
           <a>Соц Сети</a> 
          </li>
-          <a>Vynyl Vulture ©</a> 
+          <p>Vynyl Vulture ©</p> 
         </ul>
      </footer>
     )

@@ -4,24 +4,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import Form from './Form'
 interface RegProps {
-    setRegclick: React.Dispatch<React.SetStateAction<boolean>>
+    setRegclick: React.Dispatch<React.SetStateAction<boolean>>,
+    setLoginclick: React.Dispatch<React.SetStateAction<boolean>>
+
   }
 
 export default function Register(props: RegProps) {
     return (
-        <section className='popup popup_register' onClick={() => {props.setRegclick(false)}}>
+        <section className='popup popup_register'>
+           <div className='overlay' onClick={() => {props.setRegclick(false)}}></div>
            <div className='container'>
+           <button className='buttnx' onClick={() => {props.setRegclick(false)}}>
+                X
+            </button>
             <h3>Регистрация</h3>
-            <button onClick={() => {props.setRegclick(false)}}>
-                    X
-                </button>
             <Form>
-                <input placeholder='Nickname'></input>
-                <input placeholder='Email'></input>
-                <input placeholder='Password'></input>
-                <input placeholder='Confirm Password'></input>
-                <button onClick={() => {props.setRegclick(false)}}>Регистрация</button>
-
+                <input placeholder='Nickname' className='input_style'></input>
+                <input placeholder='Email' className='input_style'></input>
+                <input placeholder='Password' className='input_style'></input>
+                <input placeholder='Confirm Password' className='input_style'></input>
+                <button>Регистрация</button>
+                <button onClick={() => {
+                    props.setRegclick(false)
+                    props.setLoginclick(true)
+                }}>Уже есть Аккаунт?</button>
             </Form>
            </div> 
         </section>

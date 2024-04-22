@@ -10,7 +10,7 @@ interface FormProps {
 export default function Form(props: FormProps) {
 
  return(
-    <form>
+    <form className='popup__form'>
         {props.children}
     </form>
   )

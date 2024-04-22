@@ -24,11 +24,11 @@ function App() {
 
       </Footer>
      
-      {loginclick &&<Login setLoginclick={setLoginclick}>
+      {loginclick &&<Login setLoginclick={setLoginclick} setRegclick={setRegclick}>
         
         </Login> }
 
-      {regclick &&<Register setRegclick={setRegclick}>
+      {regclick &&<Register setRegclick={setRegclick} setLoginclick={setLoginclick}>
 
         </Register>}
 

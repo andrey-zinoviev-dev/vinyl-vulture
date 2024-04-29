@@ -6,7 +6,7 @@ export default function Footer({}) {
   
     return (
      <footer className="footer">
-        <ul>
+        <ul className='footer__ul'>
          <li>
           <a>Публичная оферта</a>
          </li>

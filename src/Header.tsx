@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 interface HeaderProps {
-  setLoginclick: React.Dispatch<React.SetStateAction<boolean>>,
-  setRegclick: React.Dispatch<React.SetStateAction<boolean>>
+  setPopUpclick: React.Dispatch<React.SetStateAction<boolean>>,
+  setLoginPopUp: React.Dispatch<React.SetStateAction<boolean>>
+  
 }
 
 export default function Header(props: HeaderProps) {
@@ -23,14 +24,15 @@ export default function Header(props: HeaderProps) {
                 </button>
             </form> 
         <div className='btn__div'>
-          <button onClick={() => {props.setLoginclick ((prevValue:boolean) => {return !prevValue;})
+          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return !prevValue;})
 
           }}
           
            className="h__btn">
             Вход
           </button>
-          <button onClick={() => {props.setRegclick ((prevValue:boolean) => {return !prevValue;})
+          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return !prevValue;})
+           props.setLoginPopUp ((prevValue:boolean) => {return !prevValue;})
           }} className="h__btn">
             Регистрация
           </button>

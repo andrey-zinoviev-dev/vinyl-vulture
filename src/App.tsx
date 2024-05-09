@@ -4,6 +4,7 @@ import Home from './Home'
 import Footer from './Footer'
 import PopUp from './PopUp'
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [popupclick, setPopUpclick] = React.useState(false)
@@ -15,15 +16,23 @@ function App() {
 
       </Header>
 
-      <Home>
+      {/* <Home>
 
-      </Home>
+      </Home> */}
+
+      <Outlet>
+        
+      </Outlet>
       
       <Footer>
 
       </Footer>
       
-      {popupclick &&  <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
+      {/* напиши такой же компонент, как ниже */}
+      {/* {popupclick &&  <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
+
+      </PopUp>} */}
+      {popupclick && <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
 
       </PopUp>}
      

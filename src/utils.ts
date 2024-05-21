@@ -1,6 +1,11 @@
 import { AlbumInterface, ArrivalsInterface } from "./intefaces";
 // import SleepToken from "./assets/Sleeptoken.png";
 // import BadOmens from "./assets/Badomens.png";
+import Metal from "./assets/masterofreality.jpg";
+import Indie from "./assets/Unpeeled.jpg";
+import Rap from "./assets/2281b612721133.5626c3e5bc694.png";
+import ShoeGaze from "./assets/c82dfe541389f8f05554a444091b34be.500x500x1.jpg";
+import Soundtrack from "./assets/81gC318-4KL._UF894,1000_QL80_.jpg";
 
 export const arrivals:ArrivalsInterface[] = [
     {
@@ -664,3 +669,34 @@ export const popularAlbums:AlbumInterface[] = [
         }
     }
 ]
+
+export const genres = [
+    {
+        name: "Metal",
+        cover: Metal,
+        displayname: "Metal",
+    },
+    {
+        name: "Rap",
+        cover: Rap,
+        displayname: "Rap",
+    },
+    {
+        name: "Indie",
+        cover: Indie,
+        displayname: "Indie",
+    },
+    {
+        name: "ShoeGaze",
+        cover: ShoeGaze,
+        displayname: "ShoeGaze",
+    },
+    {
+        name: "Soundtrack",
+        cover: Soundtrack,
+        displayname: "Soundtrack",
+    },
+
+
+]
+

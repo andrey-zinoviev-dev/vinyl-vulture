@@ -357,7 +357,7 @@
     height: 100%;
     background-color:#1A1A1A;
     border-radius: 0px;
-    background-image: url(./assets/masterofreality.jpg) ;
+    /* background-image: url(./assets/masterofreality.jpg) ; */
     aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;

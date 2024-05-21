@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import { popularAlbums } from './utils'
+import { popularAlbums, genres } from './utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faMagnifyingGlass, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faVk } from '@fortawesome/free-brands-svg-icons'
@@ -165,60 +165,46 @@ export default function Home() {
 
         </section>
         <section className='genre__cont'>
-            <button className='genre__bigd'>
-                <p className='genre__insaded-txt2'> Metal </p>
-                <p className='genre__insaded-link'>
-                    Открыть
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </p>
-                <div className='genre__insaded-overlay'>
+            {/* <ul>
+                {genres.map((genre) => {
+                    return <li key={genre.name}>
+                        <button className='genre__bigd' onClick={() => {
+                            console.log(genre);
+                        }} style={{backgroundImage: `url(${genre.cover})`}}>
+                            <p className='genre__insaded-link'>
+                                Открыть
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </p>
+                            <div className='genre__insaded-overlay'>
 
-                 </div>
-            </button>
-             <div className='genre__littled'>
-                {/* маленький д */}
-                
-                <Link to={`/genres/RAP`} state={{name: "rap", albmus: 47, cover: RAP}} className='genre__insaded' style={{backgroundImage:`url(${RAP})`}}>
-                    <p className='genre__insaded-txt1'>RAP</p>
-                    <p className='genre__insaded-link1'>
-                        Открыть
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </p>
-                    <div className='genre__insaded-overlay'>
+                            </div>
+                        </button>
+                        <p className='genre__insaded-txt2'></p>
 
-                    </div>
-                </Link>
-                <button className='genre__insaded' style={{backgroundImage:`url(${INDIE})`}}>
-                    <p className='genre__insaded-txt1'>Indie</p>
-                    <p className='genre__insaded-link2'>
-                        Открыть
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </p>
-                    <div className='genre__insaded-overlay'>
+                    </li>
+                })}
+            </ul> */}
+            
+            <ul>
+                {genres.map((genre) => {
+                    return <li key={genre.name}>
+                        <button className='genre__bigd' onClick={() => {
+                        console.log(genre);
+                        }} style={{backgroundImage: `url(${genre.cover})`}}>
+                            <p className='genre__insaded-link'>
+                                Открыть
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </p>
+                            <div className='genre__insaded-overlay'>
 
-                    </div>
-                </button>
-                <button className='genre__insaded'style={{backgroundImage:`url(${SHOEGAZE})`}}>
-                    <p className='genre__insaded-txt1'>ShoeGaze</p>
-                    <p className='genre__insaded-link3'>
-                        Открыть
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </p>
-                    <div className='genre__insaded-overlay'>
+                            </div>
+                        </button>
+                        <p className='genre__insaded-txt2'></p>
+                    </li>
+                })}
 
-                    </div>
-                </button>
-                <button className='genre__insaded'style={{backgroundImage:`url(${Soundtrack})`}}>
-                    <p className='genre__insaded-txt1'>Soundtrack</p>
-                    <p className='genre__insaded-link4'>
-                        Открыть
-                        <FontAwesomeIcon icon={faArrowRight} />
-                    </p>
-                    <div className='genre__insaded-overlay'>
+            </ul>
 
-                    </div>
-                </button>
-             </div>
         </section>
         <section className='main__cont'>
             хз чо пока что

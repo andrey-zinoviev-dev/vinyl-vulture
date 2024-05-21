@@ -2,36 +2,40 @@ import './App.css'
 import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
-import Login from './Login'
-import Register from './Regster'
+import PopUp from './PopUp'
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function App() {
-  const [loginclick, setLoginclick] = React.useState(false)
-  const [regclick, setRegclick] = React.useState(false)
+  const [popupclick, setPopUpclick] = React.useState(false)
+  const [loginpopup, setLoginPopUp] = React.useState(true)
 
   return (
     <>
-      <Header setLoginclick={setLoginclick} setRegclick={setRegclick}>
+      <Header setPopUpclick={setPopUpclick} setLoginPopUp={setLoginPopUp}>
 
       </Header>
 
-      <Home>
+      {/* <Home>
 
-      </Home>
+      </Home> */}
+
+      <Outlet>
+        
+      </Outlet>
       
       <Footer>
 
       </Footer>
+      
+      {/* напиши такой же компонент, как ниже */}
+      {/* {popupclick &&  <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
+
+      </PopUp>} */}
+      {popupclick && <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
+
+      </PopUp>}
      
-      {loginclick &&<Login setLoginclick={setLoginclick}>
-        
-        </Login> }
-
-      {regclick &&<Register setRegclick={setRegclick}>
-
-        </Register>}
-
     </>
   )
 }

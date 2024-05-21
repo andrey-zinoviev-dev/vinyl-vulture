@@ -1,12 +1,18 @@
 .footer{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    left: 0;
-    top: 0;
     background-color: #1A1A1A;
     border-top: 5px solid;
     border-color:#2e2d2d ;
-    justify-content: end;
     align-items: center;
     
+}
+
+.footer__ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 100;
 }

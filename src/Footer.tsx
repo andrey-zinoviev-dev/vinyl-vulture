@@ -6,7 +6,7 @@ export default function Footer({}) {
   
     return (
      <footer className="footer">
-        <ul>
+        <ul className='footer__ul'>
          <li>
           <a>Публичная оферта</a>
          </li>
@@ -19,7 +19,7 @@ export default function Footer({}) {
          <li>
           <a>Соц Сети</a> 
          </li>
-          <a>Vynyl Vulture ©</a> 
+          <p>Vynyl Vulture ©</p> 
         </ul>
      </footer>
     )

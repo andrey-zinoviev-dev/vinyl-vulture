@@ -9,6 +9,7 @@ import RAP from './assets/2281b612721133.5626c3e5bc694.png'
 import INDIE from './assets/Unpeeled.jpg'
 import SHOEGAZE from './assets/c82dfe541389f8f05554a444091b34be.500x500x1.jpg'
 import Soundtrack from './assets/81gC318-4KL._UF894,1000_QL80_.jpg'
+import { Link } from 'react-router-dom'
 export default function Home() {
     const [popularOrder, setPopularOrder] = React.useState(0);
 
@@ -177,7 +178,7 @@ export default function Home() {
              <div className='genre__littled'>
                 {/* маленький д */}
                 
-                <button className='genre__insaded' style={{backgroundImage:`url(${RAP})`}}>
+                <Link to={`/genres/RAP`} state={{name: "rap", albmus: 47, cover: RAP}} className='genre__insaded' style={{backgroundImage:`url(${RAP})`}}>
                     <p className='genre__insaded-txt1'>RAP</p>
                     <p className='genre__insaded-link1'>
                         Открыть
@@ -186,7 +187,7 @@ export default function Home() {
                     <div className='genre__insaded-overlay'>
 
                     </div>
-                </button>
+                </Link>
                 <button className='genre__insaded' style={{backgroundImage:`url(${INDIE})`}}>
                     <p className='genre__insaded-txt1'>Indie</p>
                     <p className='genre__insaded-link2'>

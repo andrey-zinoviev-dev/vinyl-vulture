@@ -358,7 +358,7 @@
     background-color:#1A1A1A;
     border-radius: 0px;
     /* background-image: url(./assets/masterofreality.jpg) ; */
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
@@ -528,6 +528,14 @@
     background-color:#1A1A1A;
 }
 
+.genre__ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 100%;
+    gap: 15px;
+    min-height: 360px;
+}
+
 @media screen and (max-width: 1439px) {
     .main {
         max-width: 1024px;
@@ -536,3 +544,4 @@
         max-width: 540px;
     }
 }
+

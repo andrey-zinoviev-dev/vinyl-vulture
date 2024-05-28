@@ -185,14 +185,15 @@ export default function Home() {
                 })}
             </ul> */}
             
-            <ul>
+            <ul className='genre__ul'>
                 {genres.map((genre) => {
                     return <li key={genre.name}>
                         <button className='genre__bigd' onClick={() => {
                         console.log(genre);
                         }} style={{backgroundImage: `url(${genre.cover})`}}>
                             <p className='genre__insaded-link'>
-                                Открыть
+                                {/* Открыть */}
+                                {genre.name}
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </p>
                             <div className='genre__insaded-overlay'>

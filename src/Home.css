@@ -408,18 +408,20 @@
 }
 
 .genre__insaded-link {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
     z-index: 1;
-    font-size: 32px;
+    font-size: 20px;
     /* width: 100%; */
-    display: inline-flex;
+    display:flex;
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
     /* background-color: rgba(255, 255, 255, 0.25); */
     box-sizing: border-box;
     padding: 15px 15px;
-    border-radius: 24px;
+    border-radius: 20px;
     backdrop-filter: blur(9px);
     line-height: 1;
     border: 2px solid white;

@@ -358,7 +358,7 @@
     background-color:#1A1A1A;
     border-radius: 0px;
     /* background-image: url(./assets/masterofreality.jpg) ; */
-    /* aspect-ratio: 1 / 1; */
+    aspect-ratio: 0.5;
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
@@ -366,6 +366,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    
     
 }
 
@@ -408,9 +409,9 @@
 }
 
 .genre__insaded-link {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 15px;
+    left: 15px; */
     z-index: 1;
     font-size: 20px;
     /* width: 100%; */
@@ -429,7 +430,7 @@
     letter-spacing: 3px;
 }
 
-.genre__insaded-link1 {
+/* .genre__insaded-link1 {
     position: relative;
     z-index: 1;
     font-size: 20px;
@@ -506,7 +507,7 @@
     letter-spacing: 3px;
     margin: 4px 0px;
     backdrop-filter: blur(9px);
-}
+} */
 
 
 .genre__insaded-txt2{
@@ -534,8 +535,32 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     width: 100%;
-    gap: 15px;
+    /* gap: 15px; */
     min-height: 360px;
+}
+
+.genre__bigd-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+
+}
+
+.index__style{
+    color: #FE9E01;
+}
+
+.index__div{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.genre__li{
+ border-right: 1px solid #FE9E01;
 }
 
 @media screen and (max-width: 1439px) {

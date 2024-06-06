@@ -186,19 +186,25 @@ export default function Home() {
             </ul> */}
             
             <ul className='genre__ul'>
-                {genres.map((genre) => {
-                    return <li key={genre.name}>
+                {genres.map((genre, index) => {
+                    return <li key={genre.name} className='genre__li'>
                         <button className='genre__bigd' onClick={() => {
                         console.log(genre);
-                        }} style={{backgroundImage: `url(${genre.cover})`}}>
+                        }} >
+                            <div className='index__div'><span className='index__style'>0{index + 1}</span>
+                            <span>/</span><span>0{genres.length}</span></div>
+                            <img src={genre.cover} className='genre__bigd-img'>
+
+                            </img>
+
                             <p className='genre__insaded-link'>
                                 {/* Открыть */}
                                 {genre.name}
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </p>
-                            <div className='genre__insaded-overlay'>
+                            {/* <div className='genre__insaded-overlay'>
 
-                            </div>
+                            </div> */}
                         </button>
                         <p className='genre__insaded-txt2'></p>
                     </li>

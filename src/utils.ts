@@ -674,27 +674,22 @@ export const genres = [
     {
         name: "Metal",
         cover: Metal,
-        displayname: "Metal",
     },
     {
         name: "Rap",
         cover: Rap,
-        displayname: "Rap",
     },
     {
         name: "Indie",
         cover: Indie,
-        displayname: "Indie",
     },
     {
         name: "ShoeGaze",
         cover: ShoeGaze,
-        displayname: "ShoeGaze",
     },
     {
         name: "Soundtrack",
         cover: Soundtrack,
-        displayname: "Soundtrack",
     },
 
 

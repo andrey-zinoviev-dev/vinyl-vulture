@@ -28,10 +28,6 @@ function App() {
 
       </Footer>
       
-      {/* напиши такой же компонент, как ниже */}
-      {/* {popupclick &&  <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
-
-      </PopUp>} */}
       {popupclick && <PopUp setPopUpclick={setPopUpclick} loginpopup={loginpopup} setLoginPopUp={setLoginPopUp}>
 
       </PopUp>}

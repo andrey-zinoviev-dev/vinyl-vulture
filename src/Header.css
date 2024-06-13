@@ -1,20 +1,16 @@
 .header{
-    display: flex;
-    position: sticky;
-    width: 100%;
-    left: 0;
-    top: 0;
-    /* background-color: rgb(21, 21, 21); */
-    background-color: #1A1A1A;
-    justify-content: space-between;
-    /* padding: 5px; */
-    align-items: stretch;
-    /* font-family: "Lora", serif; */
-    /* font-family: "Wix Madefor Display", sans-serif; */
-    font-family: "Manrope", sans-serif;
-    padding: 1% 15%;
-    box-sizing: border-box;
-    z-index: 10;
+  display: flex;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #1A1A1A;
+  justify-content: space-between;
+  align-items: stretch;
+  font-family: "Manrope", sans-serif;
+  padding: 1% 15%;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .header__p {
@@ -44,5 +40,5 @@
 }
 
 .h__btn:hover{
-  /* border: 2px solid; */
+ 
 }

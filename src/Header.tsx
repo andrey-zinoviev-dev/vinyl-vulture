@@ -24,15 +24,13 @@ export default function Header(props: HeaderProps) {
                 </button>
             </form> 
         <div className='btn__div'>
-          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return !prevValue;})
-
-          }}
-          
-           className="h__btn">
+          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return true;})
+          props.setLoginPopUp ((prevValue:boolean) => {return true;})
+          }}className="h__btn">
             Вход
           </button>
-          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return !prevValue;})
-           props.setLoginPopUp ((prevValue:boolean) => {return !prevValue;})
+          <button onClick={() => {props.setPopUpclick ((prevValue:boolean) => {return true;})
+           props.setLoginPopUp ((prevValue:boolean) => {return false;})
           }} className="h__btn">
             Регистрация
           </button>

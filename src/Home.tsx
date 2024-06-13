@@ -5,10 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faMagnifyingGlass, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faVk } from '@fortawesome/free-brands-svg-icons'
 import Arrivals from './Arrivals'
-import RAP from './assets/2281b612721133.5626c3e5bc694.png'
-import INDIE from './assets/Unpeeled.jpg'
-import SHOEGAZE from './assets/c82dfe541389f8f05554a444091b34be.500x500x1.jpg'
-import Soundtrack from './assets/81gC318-4KL._UF894,1000_QL80_.jpg'
 import { Link } from 'react-router-dom'
 export default function Home() {
     const [popularOrder, setPopularOrder] = React.useState(0);
@@ -59,9 +55,6 @@ export default function Home() {
                 <FontAwesomeIcon icon={faInstagram} />
             </li>
         </ul>
-        {/* <section className='main__promo'>
-            <h1>VINYL VULTURE // VINYL VULTURE // VINYL VULTURE // VINYL VULTURE //</h1>
-        </section> */}
         <section className='search'>
             {/* <h2></h2> */}
             {/* <form className='search__form'>
@@ -165,48 +158,22 @@ export default function Home() {
 
         </section>
         <section className='genre__cont'>
-            {/* <ul>
-                {genres.map((genre) => {
-                    return <li key={genre.name}>
-                        <button className='genre__bigd' onClick={() => {
-                            console.log(genre);
-                        }} style={{backgroundImage: `url(${genre.cover})`}}>
-                            <p className='genre__insaded-link'>
-                                Открыть
-                                <FontAwesomeIcon icon={faArrowRight} />
-                            </p>
-                            <div className='genre__insaded-overlay'>
-
-                            </div>
-                        </button>
-                        <p className='genre__insaded-txt2'></p>
-
-                    </li>
-                })}
-            </ul> */}
-            
             <ul className='genre__ul'>
                 {genres.map((genre, index) => {
                     return <li key={genre.name} className='genre__li'>
-                        <button className='genre__bigd' onClick={() => {
-                        console.log(genre);
-                        }} >
+                        <Link to={`/genres/` + genre.name}  state={{name: "" + genre.name , cover: genre.cover}}>
+                            <button className='genre__bigd' onClick={() => {console.log(genre.name);}}>
                             <div className='index__div'><span className='index__style'>0{index + 1}</span>
                             <span>/</span><span>0{genres.length}</span></div>
                             <img src={genre.cover} className='genre__bigd-img'>
-
                             </img>
-
                             <p className='genre__insaded-link'>
-                                {/* Открыть */}
                                 {genre.name}
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </p>
-                            {/* <div className='genre__insaded-overlay'>
-
-                            </div> */}
                         </button>
                         <p className='genre__insaded-txt2'></p>
+                        </Link>
                     </li>
                 })}
 

@@ -2,12 +2,9 @@
     position: relative;
     min-height: 100vh;
     width: 100%;
-    /* background-color: #262525; */
     box-sizing: border-box;
-    /* padding: 25px 5%; */
     max-width: 1440px;
     margin: 0 auto;
-    /* min-height: 100vh; */
 }
 
 .main__promo {
@@ -41,22 +38,14 @@
 }
 
 .search{
-    /* background-color: #1A1A1A; */
     box-sizing: border-box;
-    /* padding: 35px 30px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     border-radius: 12px;
-    /* max-width: 540px; */
     margin: 0 auto;
     gap: 30px;
-    
-    /* margin: 25px 0 0 0; */
-    /* max-width: 620px; */
-    /* margin: 0 auto 0 0; */
-    /* padding: 30px 25%; */
 }
 
 .search__text-wrapper {
@@ -97,7 +86,6 @@
     position: relative;
     width: 100%;
     max-width: 950px;
-    /* max-width: 540px; */
 }
 
 .search__input{
@@ -357,15 +345,14 @@
     height: 100%;
     background-color:#1A1A1A;
     border-radius: 0px;
-    /* background-image: url(./assets/masterofreality.jpg) ; */
-    /* aspect-ratio: 1 / 1; */
+    aspect-ratio: 0.5;
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    /* padding: 0; */
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    
     
 }
 
@@ -373,12 +360,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    /* height: 100%; */
     gap: 5px;
-    align-items: stretch;
-    
-    
-    
+    align-items: stretch;     
 }
 
 .genre__insaded{
@@ -408,17 +391,12 @@
 }
 
 .genre__insaded-link {
-    position: absolute;
-    bottom: 0;
-    left: 15px;
     z-index: 1;
     font-size: 20px;
-    /* width: 100%; */
     display:flex;
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
-    /* background-color: rgba(255, 255, 255, 0.25); */
     box-sizing: border-box;
     padding: 15px 15px;
     border-radius: 20px;
@@ -428,86 +406,6 @@
     font-family: "Jura", sans-serif;
     letter-spacing: 3px;
 }
-
-.genre__insaded-link1 {
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    box-sizing: border-box;
-    padding: 15px 15px;
-    border-radius: 20px;
-    line-height: 1;
-    border: 2px solid white;
-    font-family: "Jura", sans-serif;
-    letter-spacing: 3px;
-    margin: 4px 0px;
-    backdrop-filter: blur(9px);
-}
-
-
-.genre__insaded-link2 {
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    box-sizing: border-box;
-    padding: 15px 15px;
-    border-radius: 20px;
-    line-height: 1;
-    border: 2px solid white;
-    font-family: "Jura", sans-serif;
-    letter-spacing: 3px;
-    margin: 4px 0px;
-    backdrop-filter: blur(9px);
-}
-
-
-.genre__insaded-link3 {
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    box-sizing: border-box;
-    padding: 15px 15px;
-    border-radius: 20px;
-    line-height: 1;
-    border: 2px solid white;
-    font-family: "Jura", sans-serif;
-    letter-spacing: 3px;
-    margin: 4px 0px;
-    backdrop-filter: blur(9px);
-}
-
-
-.genre__insaded-link4 {
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    box-sizing: border-box;
-    padding: 15px 15px;
-    border-radius: 20px;
-    line-height: 1;
-    border: 2px solid white;
-    font-family: "Jura", sans-serif;
-    letter-spacing: 3px;
-    margin: 4px 0px;
-    backdrop-filter: blur(9px);
-}
-
 
 .genre__insaded-txt2{
     position: relative;
@@ -534,8 +432,31 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     width: 100%;
-    gap: 15px;
     min-height: 360px;
+}
+
+.genre__bigd-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+
+}
+
+.index__style{
+    color: #FE9E01;
+}
+
+.index__div{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.genre__li{
+ border-right: 1px solid #FE9E01;
 }
 
 @media screen and (max-width: 1439px) {

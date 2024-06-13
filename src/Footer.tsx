@@ -17,7 +17,7 @@ export default function Footer({}) {
            <a>Сотрудничество</a> 
          </li>
          <li>
-          <a>Соц Сети</a> 
+          <a>Соц. Сети</a> 
          </li>
           <p>Vynyl Vulture ©</p> 
         </ul>
